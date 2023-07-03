@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    height: 80px;
+    padding: 10px;
+}
+
+body header h1 {
+    display: inline-block;
+}
+
+body header nav ul li {
+    display: inline;
+}
+
+body main section{
+    padding: 10px;
+}
+
+body main section h1 {
+    color: white;
+    text-align: center;
+}
+
+body main section h3 {
+    color: white;
+    text-align: center;
+}
+
+body main section article p {
+    width: 300px;
+}
+
+body footer section{
+    padding: 10px;
+}
+
+body footer section {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+body footer section div nav ul li {
+    display: inline;
+}
+
+body footer section div{
+    display: inline-block;
+    width: auto;
+}
+
+body footer section div img {
+    display: block;
+}
+
+body footer section p {
+    text-align: center;  
+}
+
+.section-display-horizontal {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.section-display-horizontal h1 {
+    color: black;
+    width: 250px;
+    text-align: left;
+}
+
+.portada {
+    height: 300px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    background-color: black;
+    background-image: url("..//img/Impresion3D_Home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.portada-mediana {
+    height: 200px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    background-color: black;
+    background-image: url("..//img/Impresion3D_Home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.portada-mediana p {
+    color: white;
+    text-align: center;
+    width: auto;
+}
+
+.portada-chica {
+    resize: both;
+    overflow: auto;
+    height: 100px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    background-color: black;
+    background-image: url("..//img/Impresion3D_Home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.section-horizontal-productos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.section-horizontal-trabajos {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.caja-producto {
+    border-style: solid;
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.caja-producto img {
+    border-style: solid;
+    height: 150px;
+    width: 250px;
+}
+
+.caja-producto h3 {
+    color: black;
+    text-align: center;
+    width: 250px;
+}
+
+.caja-producto p {
+    color: black;
+    text-align: center;
+    width: 250px;
+}
+
+.caja-trabajos {
+    border-style: solid;
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.caja-trabajos img {
+    border-style: solid;
+    height: 150px;
+    width: 250px;
+}
+.caja-trabajos p {
+    color: black;
+    text-align: center;
+    width: 250px;
+}
+
+.caja-trabajos h3 {
+    color: black;
+    text-align: center;
+    width: 250px;
+}
