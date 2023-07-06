@@ -275,6 +275,24 @@ footer .redes_footer img {
 
 /* ========== Page Servicios ========== */
 
+.section_Contacto_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    background-image: url(../img/Servicios_title.png);
+    background-size: cover;
+    background-position-y: 45%;
+}
+
+.section_Contacto_title h1 {
+    color: white;
+}
+
+/* ========== Page Servicios ========== */
+
 .main_content_index {
     display: flex;
     flex-direction: column;
@@ -310,6 +328,7 @@ footer .redes_footer img {
 
 .section_descripcion_1 article {
     width: 50%;
+    padding: 1rem;
 }
 
 .Section_descripcion_separador {
@@ -333,6 +352,7 @@ footer .redes_footer img {
 
 .section_descripcion_2 article {
     width: 50%;
+    padding: 1rem;
 }
 
 .section_descripcion_2 form {
@@ -340,6 +360,7 @@ footer .redes_footer img {
     flex-direction: column;
     gap: 0.5rem;
     width: 50%;
+    padding: 1rem;
 }
 
 .section_descripcion_2 form input {
