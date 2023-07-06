@@ -1,9 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
+@font-face {
+    font-family: ;
+    src: url();
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Raleway";
+  font-family: 'Noto Serif Ottoman Siyaq', serif;
   box-sizing: border-box;
 }
 
@@ -148,6 +153,15 @@ footer .redes_footer img {
     flex-direction: column;
 }
 
+.main_content_index a {
+    border: 3px solid darkorange;
+    color: darkorange;
+    padding: 2px;
+    width: 10vh;
+    text-align: center;
+    border-radius: 1vh;
+}
+
 .footer_content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -185,16 +199,16 @@ footer .redes_footer img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: end;
     gap: 1rem;
 }
 
 .imagen_producto_index {
     width: 50%;
-}
-
-.imagen_producto_index img {
-    width: 100%;
     height: 30vh;
+    background-image: url(../img/Productos.jpeg);
+    background-size: cover;
+    background-position-y: center;
 }
 
 .section_index_services {
@@ -209,16 +223,16 @@ footer .redes_footer img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: start;
     gap: 1rem;
 }
 
 .imagen_servicios_index {
     width: 50%;
-}
-
-.imagen_servicios_index img {
-    width: 100%;
     height: 30vh;
+    background-image: url(../img/Servicios.jpeg);
+    background-size: cover;
+    background-position-y: center;
 }
 
 .section_index_jobs {
@@ -233,16 +247,16 @@ footer .redes_footer img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: end;
     gap: 1rem;
 }
 
 .imagen_jobs_index {
     width: 50%;
-}
-
-.imagen_jobs_index img {
-    width: 100%;
     height: 30vh;
+    background-image: url(../img/jobs.jpeg);
+    background-size: cover;
+    background-position-y: center;
 }
 
 .redes_footer {
@@ -335,6 +349,12 @@ footer .redes_footer img {
     .imagen_jobs_index {
         display: none;
     }
+
+    .main_content_index a {
+        border: 3px solid white;
+        color: white;
+    }
+
 }
 
 @media (min-width:1200px) {
@@ -358,6 +378,11 @@ footer .redes_footer img {
         max-width: 1300px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .main_content_index a {
+        border: 3px solid darkorange;
+        color: darkorange;
     }
 
     .footer_content {
