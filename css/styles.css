@@ -135,12 +135,12 @@ footer .redes_footer img {
 
 /* =================================== */
 
-.main_content_index {
+.main_content {
     display: flex;
     flex-direction: column;
 }
 
-.main_content_index a {
+.main_content a {
     border: 3px solid darkorange;
     color: darkorange;
     padding: 2px;
@@ -279,11 +279,6 @@ footer .redes_footer img {
 }
 
 /* ========== Page Servicios ========== */
-
-.main_content_index {
-    display: flex;
-    flex-direction: column;
-}
 
 .section_Servicios_title {
     display: flex;
@@ -451,7 +446,7 @@ footer .redes_footer img {
         display: none;
     }
 
-    .main_content_index a {
+    .main_content a {
         border: 3px solid white;
         color: white;
     }
@@ -514,13 +509,13 @@ footer .redes_footer img {
         margin-right: auto;
     }
 
-    .main_content_index {
+    .main_content {
         max-width: 1300px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .main_content_index a {
+    .main_content a {
         border: 3px solid darkorange;
         color: darkorange;
     }
