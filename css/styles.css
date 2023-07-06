@@ -260,7 +260,58 @@ footer .redes_footer img {
     text-align: center;
 }
 
-/* ========== Page Servicios ========== */
+/* ========== Page Trabajos ========== */
+
+.section_Jobs_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    background-image: url(../img/Servicios_title.png);
+    background-size: cover;
+    background-position-y: 45%;
+}
+
+.section_Jobs_title h1 {
+    color: white;
+}
+
+.section_trabajos_cajas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+    gap: 1rem;
+}
+
+.caja_trabajos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid darkorange;
+    border-radius: 1vh;
+    padding: 20px;
+    gap: 1rem;
+    text-align: center;
+    max-width: 45vh;
+    min-width: 35vh;
+}
+
+.caja_trabajos img {
+    width: 100%;
+    max-height: 30vh;
+    border: 1px solid black;
+}
+
+.caja_trabajos h3 {
+    color: darkorange;
+    text-align: center;
+}
+
+/* ========== Page Contacto ========== */
 
 .section_Contacto_title {
     display: flex;
@@ -560,5 +611,12 @@ footer .redes_footer img {
     footer div p {
         text-align: center;
         font-size: 1rem;
+    }
+
+    .section_trabajos_cajas {
+        display: flex;
+        flex-direction: row;
+        padding: 2vh;
+        gap: 1rem;
     }
 }
