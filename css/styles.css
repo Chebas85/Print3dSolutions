@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 * {
   margin: 0;
@@ -16,7 +17,41 @@ a {
   color: inherit;
 }
 
-/* ===== HEADER ===== */
+/* SE UTILIZA FLEX CON ORIENTACION COLUMN PARA EL CUERPO DE CADA SECCION DEL SITIO */
+.main_content {
+  display: flex;
+  flex-direction: column;
+}
+.main_content a {
+  border: 3px solid darkorange;
+  color: darkorange;
+  padding: 2px;
+  width: 10vh;
+  text-align: center;
+  border-radius: 1vh;
+}
+
+/* ===== RESOLUCION TABLET ===== */
+@media (max-width: 768px) {
+  .main_content a {
+    border: 3px solid white;
+    color: white;
+  }
+}
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .main_content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main_content a {
+    border: 3px solid darkorange;
+    color: darkorange;
+  }
+}
+/* ====== HEADER ====== */
+/* SE REDEFINE EL TAMAÑO DEL LOGO PARA LA VERSION MOBILE */
 header {
   background-color: black;
   color: white;
@@ -24,25 +59,6 @@ header {
 header .header_content .top-nav div img {
   height: 100px;
   width: 100px;
-}
-
-/* ===== MAIN ===== */
-/* ===== FOOTER ===== */
-footer {
-  background-color: black;
-  color: white;
-}
-footer div p {
-  text-align: center;
-  font-size: 0.75rem;
-}
-footer .footer_content img {
-  height: 100px;
-  width: 100px;
-}
-footer .redes_footer img {
-  height: 35px;
-  width: 35px;
 }
 
 /* ==== FUNCIONES MENU HAMBURGUESA ==== */
@@ -118,20 +134,85 @@ footer .redes_footer img {
   transform: rotate(-405deg);
 }
 
-/* =================================== */
-.main_content {
-  display: flex;
-  flex-direction: column;
+/* ================================================================ */
+/* ===== RESOLUCION TABLET ===== */
+@media (max-width: 768px) {
+  /* ==== FUNCIONES MENU HAMBURGUESA ==== */
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 120px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  /* ============================================ */
 }
-.main_content a {
-  border: 3px solid darkorange;
-  color: darkorange;
-  padding: 2px;
-  width: 10vh;
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .top-nav {
+    height: 170px;
+  }
+  header .header_content .top-nav div img {
+    height: 150px;
+    width: 150px;
+  }
+  .header_content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ====== FOOTER ====== */
+footer {
+  /* PARA TODO EL FOOTER SE AGREGA FONDO NEGRO Y LETAS EN COLOR BLANCO */
+  background-color: black;
+  color: white;
+}
+footer div p {
   text-align: center;
-  border-radius: 1vh;
+  font-size: 0.75rem;
+}
+footer .footer_content img {
+  height: 100px;
+  width: 100px;
+}
+footer .redes_footer img {
+  height: 35px;
+  width: 35px;
 }
 
+/* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
 .footer_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -144,6 +225,59 @@ footer .redes_footer img {
   gap: 10px;
 }
 
+.redes_footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 0.5rem;
+  margin-right: 1rem;
+}
+
+.copy_footer {
+  grid-column: span 3;
+  text-align: center;
+}
+
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .footer_content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .footer_content nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer_content nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  footer .footer_content img {
+    height: 150px;
+    width: 150px;
+  }
+  .redes_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+  footer .redes_footer img {
+    height: 45px;
+    width: 45px;
+  }
+  footer div p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
+/* ====== INDEX ====== */
 .section_index_title {
   display: flex;
   flex-direction: column;
@@ -162,6 +296,12 @@ footer .redes_footer img {
   text-align: right;
 }
 
+.section_index_services {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
+
 .articulo_producto_index {
   width: 50%;
   padding: 1rem;
@@ -178,12 +318,6 @@ footer .redes_footer img {
   background-image: url(../img/Productos.jpeg);
   background-size: cover;
   background-position-y: center;
-}
-
-.section_index_services {
-  display: flex;
-  flex-direction: row;
-  text-align: left;
 }
 
 .articulo_servicios_index {
@@ -228,21 +362,7 @@ footer .redes_footer img {
   background-position-y: center;
 }
 
-.redes_footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  gap: 0.5rem;
-  margin-right: 1rem;
-}
-
-.copy_footer {
-  grid-column: span 3;
-  text-align: center;
-}
-
-/* ========== Page Productos ========== */
+/* ====== PRODUCTOS ====== */
 .section_productos_title {
   display: flex;
   flex-direction: column;
@@ -303,7 +423,33 @@ footer .redes_footer img {
   border-radius: 1.5vh;
 }
 
-/* ========== Page Trabajos ========== */
+/* ===== RESOLUCION TABLET ===== */
+@media (max-width: 768px) {
+  .articulo_producto_index {
+    width: 100%;
+    color: white;
+    background-image: url(../img/Productos.jpeg);
+    background-size: cover;
+    background-position-y: center;
+  }
+  .imagen_producto_index {
+    display: none;
+  }
+}
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .section_productos_cajas {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+    gap: 1rem;
+  }
+  .caja_productos {
+    max-width: 30%;
+    min-width: 25%;
+  }
+}
+/* ====== TRABAJOS ====== */
 .section_Jobs_title {
   display: flex;
   flex-direction: column;
@@ -351,23 +497,33 @@ footer .redes_footer img {
   text-align: center;
 }
 
-/* ========== Page Contacto ========== */
-.section_Contacto_title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 20vh;
-  background-image: url(../img/Servicios_title.png);
-  background-size: cover;
-  background-position-y: 45%;
+/* ===== RESOLUCION TABLET ===== */
+@media (max-width: 768px) {
+  .articulo_jobs_index {
+    width: 100%;
+    color: white;
+    background-image: url(../img/jobs.jpeg);
+    background-size: cover;
+    background-position-y: center;
+  }
+  .imagen_jobs_index {
+    display: none;
+  }
 }
-.section_Contacto_title h1 {
-  color: white;
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .section_trabajos_cajas {
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+    gap: 1rem;
+  }
+  .caja_trabajos {
+    max-width: 30%;
+    min-width: 25%;
+  }
 }
-
-/* ========== Page Servicios ========== */
+/* ====== SERVICIOS ====== */
 .section_Servicios_title {
   display: flex;
   flex-direction: column;
@@ -446,56 +602,8 @@ footer .redes_footer img {
   border-radius: 1.5vh;
 }
 
-/* ============================= */
+/* ===== RESOLUCION TABLET ===== */
 @media (max-width: 768px) {
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 120px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-  .articulo_producto_index {
-    width: 100%;
-    color: white;
-    background-image: url(../img/Productos.jpeg);
-    background-size: cover;
-    background-position-y: center;
-  }
-  .imagen_producto_index {
-    display: none;
-  }
   .articulo_servicios_index {
     width: 100%;
     color: white;
@@ -506,21 +614,6 @@ footer .redes_footer img {
   .imagen_servicios_index {
     display: none;
   }
-  .articulo_jobs_index {
-    width: 100%;
-    color: white;
-    background-image: url(../img/jobs.jpeg);
-    background-size: cover;
-    background-position-y: center;
-  }
-  .imagen_jobs_index {
-    display: none;
-  }
-  .main_content a {
-    border: 3px solid white;
-    color: white;
-  }
-  /* ========== Page Servicios ========== */
   .section_Servicios_title {
     height: 10vh;
   }
@@ -553,83 +646,20 @@ footer .redes_footer img {
     padding: 10px;
   }
 }
-@media (min-width: 1200px) {
-  .top-nav {
-    height: 170px;
-  }
-  header .header_content .top-nav div img {
-    height: 150px;
-    width: 150px;
-  }
-  .header_content {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .main_content {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .main_content a {
-    border: 3px solid darkorange;
-    color: darkorange;
-  }
-  .footer_content {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .footer_content nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer_content nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  footer .footer_content img {
-    height: 150px;
-    width: 150px;
-  }
-  .redes_footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 1rem;
-    margin-right: 1rem;
-  }
-  footer .redes_footer img {
-    height: 45px;
-    width: 45px;
-  }
-  footer div p {
-    text-align: center;
-    font-size: 1rem;
-  }
-  .section_trabajos_cajas {
-    display: flex;
-    flex-direction: row;
-    padding: 2vh;
-    gap: 1rem;
-  }
-  .caja_trabajos {
-    max-width: 30%;
-    min-width: 25%;
-  }
-  .section_productos_cajas {
-    display: flex;
-    flex-direction: row;
-    padding: 2vh;
-    gap: 1rem;
-  }
-  .caja_productos {
-    max-width: 30%;
-    min-width: 25%;
-  }
+/* ====== CONTACTOS ====== */
+.section_Contacto_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 20vh;
+  background-image: url(../img/Servicios_title.png);
+  background-size: cover;
+  background-position-y: 45%;
+}
+.section_Contacto_title h1 {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

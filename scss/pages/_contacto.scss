@@ -1,0 +1,17 @@
+/* ====== CONTACTOS ====== */
+
+.section_Contacto_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20vh;
+    background-image: url(../img/Servicios_title.png);
+    background-size: cover;
+    background-position-y: 45%;
+
+    h1 {
+        color: white;
+    }
+}

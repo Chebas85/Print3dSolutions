@@ -1,3 +1,18 @@
+$bkp_tablet: 768px;
+$bkp_descktop: 1200px;
+
+@mixin tablet {
+    @media (min-width: $bkp_tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $bkp_descktop) {
+        @content;
+    }
+}
+
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 
 * {
@@ -15,4 +30,45 @@ ol {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* SE UTILIZA FLEX CON ORIENTACION COLUMN PARA EL CUERPO DE CADA SECCION DEL SITIO */
+.main_content {
+    display: flex;
+    flex-direction: column;
+ 
+    a {
+        border: 3px solid darkorange;
+        color: darkorange;
+        padding: 2px;
+        width: 10vh;
+        text-align: center;
+        border-radius: 1vh;
+    }
+}
+
+/* ===== RESOLUCION TABLET ===== */
+@media (max-width: 768px) {
+
+    .main_content a {
+        border: 3px solid white;
+        color: white;
+    }
+
+}
+
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width:1200px) {
+
+    .main_content {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            border: 3px solid darkorange;
+            color: darkorange;
+        }
+    }
+    
 }

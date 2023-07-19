@@ -1,0 +1,85 @@
+/* ====== INDEX ====== */
+
+.section_index_title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-image: url(../img/portada.jpeg);
+    background-size: cover;
+    background-position-y: center;
+    height: 20vh;
+}
+
+.section_index_product {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.section_index_services {
+    display: flex;
+    flex-direction: row;
+    text-align: left;   
+}
+
+.articulo_producto_index {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 1rem;
+}
+
+.imagen_producto_index {
+    width: 50%;
+    height: 30vh;
+    background-image: url(../img/Productos.jpeg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.articulo_servicios_index {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+}
+
+.imagen_servicios_index {
+    width: 50%;
+    height: 30vh;
+    background-image: url(../img/Servicios.jpeg);
+    background-size: cover;
+    background-position-y: center;
+}
+
+.section_index_jobs {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+}
+
+.articulo_jobs_index {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 1rem;
+}
+
+.imagen_jobs_index {
+    width: 50%;
+    height: 30vh;
+    background-image: url(../img/jobs.jpeg);
+    background-size: cover;
+    background-position-y: center;
+}

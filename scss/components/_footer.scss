@@ -1,0 +1,102 @@
+/* ====== FOOTER ====== */
+
+footer {
+    /* PARA TODO EL FOOTER SE AGREGA FONDO NEGRO Y LETAS EN COLOR BLANCO */
+    background-color: black;
+    color: white;
+    div {
+        p {
+            text-align: center;
+            font-size: 0.75rem;
+        }
+    }
+    .footer_content {
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+    .redes_footer {
+        img {
+            height: 35px;
+            width: 35px;
+        }
+    }
+}
+
+/* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
+.footer_content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 30px;
+    padding: 1rem;
+
+    nav {
+        ul {
+            display: flex block;
+            text-align: center;
+            gap: 10px;
+        }
+    }
+}
+
+.redes_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.copy_footer {
+    grid-column: span 3;
+    text-align: center;
+}
+
+/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width:1200px) {
+
+    .footer_content {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+
+        nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            ul{
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    }
+
+    footer .footer_content img {
+        height: 150px;
+        width: 150px;    
+    }
+
+    .redes_footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        gap: 1rem;
+        margin-right: 1rem;
+    }
+
+    footer .redes_footer img {
+        height: 45px;
+        width: 45px;
+    }
+
+    footer div p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}
