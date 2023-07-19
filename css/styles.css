@@ -30,26 +30,26 @@ a {
   text-align: center;
   border-radius: 1vh;
 }
-
-/* ===== RESOLUCION TABLET ===== */
 @media (max-width: 768px) {
   .main_content a {
     border: 3px solid white;
     color: white;
   }
 }
-/* ===== RESOLUCION ESCRITORIO ===== */
+@media (min-width: 1200px) {
+  .main_content a {
+    border: 3px solid darkorange;
+    color: darkorange;
+  }
+}
 @media (min-width: 1200px) {
   .main_content {
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
   }
-  .main_content a {
-    border: 3px solid darkorange;
-    color: darkorange;
-  }
 }
+
 /* ====== HEADER ====== */
 /* SE REDEFINE EL TAMAÑO DEL LOGO PARA LA VERSION MOBILE */
 header {
@@ -59,6 +59,19 @@ header {
 header .header_content .top-nav div img {
   height: 100px;
   width: 100px;
+}
+@media (min-width: 1200px) {
+  header .header_content .top-nav div img {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media (min-width: 1200px) {
+  header .header_content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* ==== FUNCIONES MENU HAMBURGUESA ==== */
@@ -70,6 +83,11 @@ header .header_content .top-nav div img {
   color: #FFF;
   height: 120px;
   padding: 1em;
+}
+@media (min-width: 1200px) {
+  .top-nav {
+    height: 170px;
+  }
 }
 
 .menu {
@@ -83,6 +101,37 @@ header .header_content .top-nav div img {
   margin: 0 0.5rem;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
+}
+.menu > li:not(:last-child) {
+  border-bottom: none;
+}
+@media (max-width: 768px) {
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 120px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
 
 .menu-button-container {
   display: none;
@@ -93,11 +142,31 @@ header .header_content .top-nav div img {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .menu-button-container {
+    display: flex;
+  }
+}
 
 #menu-toggle {
   display: none;
 }
 
+@media (max-width: 768px) {
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -135,64 +204,6 @@ header .header_content .top-nav div img {
 }
 
 /* ================================================================ */
-/* ===== RESOLUCION TABLET ===== */
-@media (max-width: 768px) {
-  /* ==== FUNCIONES MENU HAMBURGUESA ==== */
-  .menu-button-container {
-    display: flex;
-  }
-  .menu {
-    position: absolute;
-    top: 0;
-    margin-top: 120px;
-    left: 0;
-    flex-direction: column;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  #menu-toggle ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-toggle:checked ~ .menu li {
-    border: 1px solid #333;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
-  }
-  /* ============================================ */
-}
-/* ===== RESOLUCION ESCRITORIO ===== */
-@media (min-width: 1200px) {
-  .top-nav {
-    height: 170px;
-  }
-  header .header_content .top-nav div img {
-    height: 150px;
-    width: 150px;
-  }
-  .header_content {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
 /* ====== FOOTER ====== */
 footer {
   /* PARA TODO EL FOOTER SE AGREGA FONDO NEGRO Y LETAS EN COLOR BLANCO */
@@ -203,13 +214,31 @@ footer div p {
   text-align: center;
   font-size: 0.75rem;
 }
+@media (min-width: 1200px) {
+  footer div p {
+    text-align: center;
+    font-size: 1rem;
+  }
+}
 footer .footer_content img {
   height: 100px;
   width: 100px;
 }
+@media (min-width: 1200px) {
+  footer .footer_content img {
+    height: 150px;
+    width: 150px;
+  }
+}
 footer .redes_footer img {
   height: 35px;
   width: 35px;
+}
+@media (min-width: 1200px) {
+  footer .redes_footer img {
+    height: 45px;
+    width: 45px;
+  }
 }
 
 /* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
@@ -224,6 +253,27 @@ footer .redes_footer img {
   text-align: center;
   gap: 10px;
 }
+@media (min-width: 1200px) {
+  .footer_content nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .footer_content nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .footer_content {
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .redes_footer {
   display: flex;
@@ -233,33 +283,7 @@ footer .redes_footer img {
   gap: 0.5rem;
   margin-right: 1rem;
 }
-
-.copy_footer {
-  grid-column: span 3;
-  text-align: center;
-}
-
-/* ===== RESOLUCION ESCRITORIO ===== */
 @media (min-width: 1200px) {
-  .footer_content {
-    max-width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .footer_content nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .footer_content nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-  footer .footer_content img {
-    height: 150px;
-    width: 150px;
-  }
   .redes_footer {
     display: flex;
     flex-direction: row;
@@ -268,15 +292,13 @@ footer .redes_footer img {
     gap: 1rem;
     margin-right: 1rem;
   }
-  footer .redes_footer img {
-    height: 45px;
-    width: 45px;
-  }
-  footer div p {
-    text-align: center;
-    font-size: 1rem;
-  }
 }
+
+.copy_footer {
+  grid-column: span 3;
+  text-align: center;
+}
+
 /* ====== INDEX ====== */
 .section_index_title {
   display: flex;

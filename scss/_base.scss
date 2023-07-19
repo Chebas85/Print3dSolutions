@@ -1,8 +1,8 @@
-$bkp_tablet: 768px;
+$bkp_mobile: 768px;
 $bkp_descktop: 1200px;
 
-@mixin tablet {
-    @media (min-width: $bkp_tablet) {
+@mixin mobile {
+    @media (max-width: $bkp_mobile) {
         @content;
     }
 }
@@ -44,31 +44,21 @@ a {
         width: 10vh;
         text-align: center;
         border-radius: 1vh;
-    }
-}
 
-/* ===== RESOLUCION TABLET ===== */
-@media (max-width: 768px) {
+        @include mobile{
+            border: 3px solid white;
+            color: white;
+        }
 
-    .main_content a {
-        border: 3px solid white;
-        color: white;
-    }
-
-}
-
-/* ===== RESOLUCION ESCRITORIO ===== */
-@media (min-width:1200px) {
-
-    .main_content {
-        max-width: 1300px;
-        margin-left: auto;
-        margin-right: auto;
-
-        a {
+        @include desktop {
             border: 3px solid darkorange;
             color: darkorange;
         }
     }
-    
+
+    @include desktop {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
