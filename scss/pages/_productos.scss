@@ -29,6 +29,13 @@
     justify-content: center;
     padding: 2vh;
     gap: 1rem;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        padding: 2vh;
+        gap: 1rem;
+    }
 }
 
 .caja_productos {
@@ -62,6 +69,11 @@
         color: white;
         text-align: center;
         border-radius: 1.5vh;   
+    }
+
+    @include desktop {
+        max-width: 30%;
+        min-width: 25%;
     }
 }
 

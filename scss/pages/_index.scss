@@ -32,6 +32,14 @@
     justify-content: center;
     align-items: end;
     gap: 1rem;
+
+    @include mobile {
+        width: 100%;
+        color: white;
+        background-image: url(../img/Productos.jpeg);
+        background-size: cover;
+        background-position-y: center;
+    }
 }
 
 .imagen_producto_index {
@@ -40,6 +48,10 @@
     background-image: url(../img/Productos.jpeg);
     background-size: cover;
     background-position-y: center;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .articulo_servicios_index {
@@ -50,6 +62,14 @@
     justify-content: center;
     align-items: start;
     gap: 1rem;
+
+    @include mobile {
+        width: 100%;
+        color: white;
+        background-image: url(../img/Servicios.jpeg);
+        background-size: cover;
+        background-position-y: center;
+    }
 }
 
 .imagen_servicios_index {
@@ -58,6 +78,10 @@
     background-image: url(../img/Servicios.jpeg);
     background-size: cover;
     background-position-y: center;
+
+    @include mobile {
+        display: none;
+    }
 }
 
 .section_index_jobs {
@@ -74,6 +98,14 @@
     justify-content: center;
     align-items: end;
     gap: 1rem;
+
+    @include mobile {
+        width: 100%;
+        color: white;
+        background-image: url(../img/jobs.jpeg);
+        background-size: cover;
+        background-position-y: center;
+    }
 }
 
 .imagen_jobs_index {
@@ -82,4 +114,8 @@
     background-image: url(../img/jobs.jpeg);
     background-size: cover;
     background-position-y: center;
+
+    @include mobile {
+        display: none;
+    }
 }

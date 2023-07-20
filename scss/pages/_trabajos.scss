@@ -23,6 +23,13 @@
     justify-content: center;
     padding: 2vh;
     gap: 1rem;
+
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        padding: 2vh;
+        gap: 1rem;
+    }
 }
 
 .caja_trabajos {
@@ -47,6 +54,11 @@
     h3 {
         color: darkorange;
         text-align: center;
+    }
+
+    @include desktop {
+        max-width: 30%;
+        min-width: 25%;
     }
 }
 
