@@ -8,7 +8,7 @@ $bkp_descktop: 1200px;
     }
 }
 
-@mixin table {
+@mixin tablet {
     @media (min-width: $bkp_tablet) {
         @content;
     }
