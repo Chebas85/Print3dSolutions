@@ -7,7 +7,7 @@
     align-items: center;
     text-align: center;
     height: 20vh;
-    background-image: url(../img/Servicios_title.png);
+    background-image: url(../img/portada.jpeg);
     background-size: cover;
     background-position-y: 45%;
 
@@ -60,38 +60,4 @@
         max-width: 30%;
         min-width: 25%;
     }
-}
-
-/* ===== RESOLUCION TABLET ===== */
-@media (max-width: 768px) {
-
-    .articulo_jobs_index {
-        width: 100%;
-        color: white;
-        background-image: url(../img/jobs.jpeg);
-        background-size: cover;
-        background-position-y: center;
-    }
-
-    .imagen_jobs_index {
-        display: none;
-    }
-
-}
-
-/* ===== RESOLUCION ESCRITORIO ===== */
-@media (min-width:1200px) {
-
-    .section_trabajos_cajas {
-        display: flex;
-        flex-direction: row;
-        padding: 2vh;
-        gap: 1rem;
-    }
-
-    .caja_trabajos {
-        max-width: 30%;
-        min-width: 25%;
-    }
-
 }

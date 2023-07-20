@@ -7,11 +7,11 @@
     align-items: center;
     text-align: center;
     height: 20vh;
-    background-image: url(../img/Servicios_title.png);
+    background-image: url(../img/portada.jpeg);
     background-size: cover;
-    background-position-y: 45%;
+    background-position-y: center;
+    min-width: 280px;
     gap: 1rem;
-    padding: 10vh;
 
     h1 {
         color: white;
@@ -19,6 +19,10 @@
 
     p {
         color: white;
+    }
+
+    @include desktop {
+        padding: 10vh;
     }
 }
 
@@ -75,38 +79,4 @@
         max-width: 30%;
         min-width: 25%;
     }
-}
-
-/* ===== RESOLUCION TABLET ===== */
-@media (max-width: 768px) {
-
-    .articulo_producto_index {
-        width: 100%;
-        color: white;
-        background-image: url(../img/Productos.jpeg);
-        background-size: cover;
-        background-position-y: center;
-    }
-
-    .imagen_producto_index {
-        display: none;
-    }
-
-}
-
-/* ===== RESOLUCION ESCRITORIO ===== */
-@media (min-width:1200px) {
-
-    .section_productos_cajas {
-        display: flex;
-        flex-direction: row;
-        padding: 2vh;
-        gap: 1rem;
-    }
-
-    .caja_productos {
-        max-width: 30%;
-        min-width: 25%;
-    }
-
 }

@@ -1,13 +1,13 @@
 /* ====== SERVICIOS ====== */
 
-.section_Servicios_title {
+.sec-services__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 20vh;
-    background-image: url(../img/Servicios_title.png);
+    background-image: url(../img/portada.jpeg);
     background-size: cover;
     background-position-y: 45%;
 
@@ -20,7 +20,7 @@
     }
 }
 
-.section_descripcion_1 {
+.sec-services-subtitle__section {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,7 +51,7 @@
     }
 }
 
-.Section_descripcion_separador {
+.sec-services__separator {
     height: 0.5vh;
     background-color: #00BAF0;
     background: linear-gradient(to left, #f46b45, #eea849);
@@ -59,7 +59,7 @@
     border-radius: 1vh;
 }
 
-.section_descripcion_2 {
+.sec-services-form__section {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -79,41 +79,6 @@
         }
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 50%;
-        padding: 1rem;
-
-        input {
-            max-width: 40vh;
-            border-radius: 1vh;
-            border: 1px solid darkorange;
-            padding: 0 10px;
-        }
-
-        textarea {
-            max-width: 50vh;
-            border-radius: 1vh;
-            border: 1px solid darkorange;
-        }
-
-        .servicios_form_boton{
-            max-width: 20vh;
-            background-color: darkorange;
-            border: 1px solid darkorange;
-            color: white;
-            text-align: center;
-            border-radius: 1.5vh;
-        }
-
-        @include mobile {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-
     @include mobile {
         display: flex;
         flex-direction: column;
@@ -122,58 +87,4 @@
         padding: 1rem;
         text-align: center;
     }
-}
-
-/* ===== RESOLUCION TABLET ===== */
-@media (max-width: 768px) {
-
-    .articulo_servicios_index {
-        width: 100%;
-        color: white;
-        background-image: url(../img/Servicios.jpeg);
-        background-size: cover;
-        background-position-y: center;
-    }
-    
-    .imagen_servicios_index {
-        display: none;
-    }
-
-    .section_Servicios_title {
-        height: 10vh;
-    }
-
-    .section_descripcion_1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        padding: 1rem;
-        text-align: center;
-
-        article {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-    
-    .section_descripcion_2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100%;
-        padding: 1rem;
-        text-align: center;
-
-        article {
-            width: 100%;
-            padding: 10px;
-        }
-
-        form {
-            width: 100%;
-            padding: 10px;
-        }
-    }
-
 }

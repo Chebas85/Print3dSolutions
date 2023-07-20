@@ -1,17 +1,48 @@
 /* ====== CONTACTOS ====== */
 
-.section_Contacto_title {
+.sec-contacto__title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 20vh;
-    background-image: url(../img/Servicios_title.png);
+    background-image: url(../img/portada.jpeg);
     background-size: cover;
-    background-position-y: 45%;
+    background-position-y: center;
+    min-width: 280px;
 
     h1 {
         color: white;
+    }
+}
+
+.sec-contacto__section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+
+    h2 {
+        color: darkorange;
+    }
+
+    article {
+        width: 50%;
+        padding: 1rem;
+
+        @include mobile {
+            width: 100%;
+            padding: 10px;
+        }
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding: 1rem;
+        text-align: center;
     }
 }

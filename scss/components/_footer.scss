@@ -4,8 +4,84 @@ footer {
     /* PARA TODO EL FOOTER SE AGREGA FONDO NEGRO Y LETAS EN COLOR BLANCO */
     background-color: black;
     color: white;
+    min-width: 280px;
 
-    div {
+    .footer__content {
+        /* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 30px;
+        padding: 1rem;
+
+        .sec-footer__logo {
+            height: 100px;
+            width: 100px;
+
+            @include desktop {
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        nav {
+            ul {
+                display: flex block;
+                text-align: center;
+                gap: 10px;
+
+                @include desktop {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1rem;
+                }    
+            }
+
+            @include desktop {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        @include desktop {
+            max-width: 1300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .sec-footer__redes {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 0.5rem;
+        margin-right: 1rem;
+
+        .sec-redes__img {
+            height: 35px;
+            width: 35px;
+
+            @include desktop {
+                height: 45px;
+                width: 45px;
+            }
+        }
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 1rem;
+            margin-right: 1rem;
+        }
+    }
+
+    .sec-footer__copy {
+        grid-column: span 3;
+        text-align: center;
+
         p {
             text-align: center;
             font-size: 0.75rem;
@@ -16,85 +92,4 @@ footer {
             }
         }
     }
-
-    .footer_content {
-        img {
-            height: 100px;
-            width: 100px;
-
-            @include desktop {
-                height: 150px;
-                width: 150px;
-            }
-        }
-    }
-
-    .redes_footer {
-        img {
-            height: 35px;
-            width: 35px;
-
-            @include desktop {
-                height: 45px;
-                width: 45px;
-            }
-        }
-    }
-}
-
-/* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
-.footer_content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 30px;
-    padding: 1rem;
-
-    nav {
-        ul {
-            display: flex block;
-            text-align: center;
-            gap: 10px;
-
-            @include desktop {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-            }    
-        }
-
-        @include desktop {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-    @include desktop {
-        max-width: 1300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.redes_footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    gap: 0.5rem;
-    margin-right: 1rem;
-
-    @include desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-        align-items: center;
-        gap: 1rem;
-        margin-right: 1rem;
-    }
-}
-
-.copy_footer {
-    grid-column: span 3;
-    text-align: center;
 }

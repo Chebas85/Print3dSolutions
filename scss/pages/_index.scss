@@ -1,6 +1,6 @@
 /* ====== INDEX ====== */
 
-.section_index_title {
+.home-title__section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,23 +8,17 @@
     color: white;
     background-image: url(../img/portada.jpeg);
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
     height: 20vh;
 }
 
-.section_index_product {
+.home-product__section {
     display: flex;
     flex-direction: row;
     text-align: right;
 }
 
-.section_index_services {
-    display: flex;
-    flex-direction: row;
-    text-align: left;   
-}
-
-.articulo_producto_index {
+.home-product__article {
     width: 50%;
     padding: 1rem;
     display: flex;
@@ -32,29 +26,50 @@
     justify-content: center;
     align-items: end;
     gap: 1rem;
+    height: 350px;
 
     @include mobile {
         width: 100%;
         color: white;
         background-image: url(../img/Productos.jpeg);
         background-size: cover;
-        background-position-y: center;
+        background-position: center;
+    }
+
+    @include desktop {
+        height: 400px;
     }
 }
 
-.imagen_producto_index {
+.home-product__img {
     width: 50%;
-    height: 30vh;
     background-image: url(../img/Productos.jpeg);
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
 
     @include mobile {
         display: none;
     }
 }
 
-.articulo_servicios_index {
+.home-services__section {
+    display: flex;
+    flex-direction: row;
+    text-align: left;   
+}
+
+.home-services__img {
+    width: 50%;
+    background-image: url(../img/Servicios.jpeg);
+    background-size: cover;
+    background-position: center;
+
+    @include mobile {
+        display: none;
+    }
+}
+
+.home-services__article {
     width: 50%;
     padding: 1rem;
     display: flex;
@@ -62,35 +77,28 @@
     justify-content: center;
     align-items: start;
     gap: 1rem;
+    height: 350px;
 
     @include mobile {
         width: 100%;
         color: white;
         background-image: url(../img/Servicios.jpeg);
         background-size: cover;
-        background-position-y: center;
+        background-position: center;
+    }
+
+    @include desktop {
+        height: 400px;
     }
 }
 
-.imagen_servicios_index {
-    width: 50%;
-    height: 30vh;
-    background-image: url(../img/Servicios.jpeg);
-    background-size: cover;
-    background-position-y: center;
-
-    @include mobile {
-        display: none;
-    }
-}
-
-.section_index_jobs {
+.home-jobs__sections {
     display: flex;
     flex-direction: row;
     text-align: right;
 }
 
-.articulo_jobs_index {
+.home-jobs__article {
     width: 50%;
     padding: 1rem;
     display: flex;
@@ -98,22 +106,26 @@
     justify-content: center;
     align-items: end;
     gap: 1rem;
+    height: 350px;
 
     @include mobile {
         width: 100%;
         color: white;
         background-image: url(../img/jobs.jpeg);
         background-size: cover;
-        background-position-y: center;
+        background-position: center;
+    }
+
+    @include desktop {
+        height: 400px;
     }
 }
 
-.imagen_jobs_index {
+.home-jobs__img {
     width: 50%;
-    height: 30vh;
     background-image: url(../img/jobs.jpeg);
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
 
     @include mobile {
         display: none;

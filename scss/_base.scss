@@ -1,8 +1,15 @@
 $bkp_mobile: 768px;
+$bkp_tablet: 768px;
 $bkp_descktop: 1200px;
 
 @mixin mobile {
     @media (max-width: $bkp_mobile) {
+        @content;
+    }
+}
+
+@mixin table {
+    @media (min-width: $bkp_tablet) {
         @content;
     }
 }
@@ -33,9 +40,10 @@ a {
 }
 
 /* SE UTILIZA FLEX CON ORIENTACION COLUMN PARA EL CUERPO DE CADA SECCION DEL SITIO */
-.main_content {
+.main__content {
     display: flex;
     flex-direction: column;
+    min-width: 280px;
  
     a {
         border: 3px solid darkorange;
