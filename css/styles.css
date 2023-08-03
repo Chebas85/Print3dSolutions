@@ -216,6 +216,8 @@ footer {
   background-color: black;
   color: white;
   min-width: 280px;
+  /* SECCION DE REDES - SE VISUALIZA DE FORMA VERTIAL EN MOBILE Y HORIZONTAL EN ESCRITORIO */
+  /* SECCION DEL COPYRIGHT - SE REALIZA SPAN PARA TOMAR EL TOCAL DE LAS COLUMNAS DE LA GRILLA */
 }
 footer .footer__content {
   /* SE UTILIZA GRID PARA ORGANIZAR LAS SECCIONES DEL FOOTER Y FLEX PARA REDIRECCIONAR EL MENU */
@@ -223,6 +225,7 @@ footer .footer__content {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 30px;
   padding: 1rem;
+  /* BARRA DE NAVEGACION EN EL FOOTER - EN FORMATO MOBILE ES VERTICAL Y ESCRITORIO HORIZONTAL */
 }
 footer .footer__content .sec-footer__logo {
   height: 100px;
@@ -309,6 +312,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== ESTILOS FORM ====== */
+/* SE MODIFICA EL ESTILO DE LAS CAJAS INPUT PARA QUE SEAN REDONDEADAS Y DE COLOR NARANJA */
 .contacto__form {
   display: flex;
   flex-direction: column;
@@ -343,6 +347,17 @@ footer .sec-footer__copy p {
 }
 
 /* ====== ESTILOS CAJAS ====== */
+@keyframes ingresar-desde-arriba {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* DISEÑO DE CAJA PARA PRODUCTOS Y TRABAJOS - SE REALIZA TRANSICION DE IZQ. A DER. Y ZOOM AL PASAR POR LA IMAGEN */
 .product__box {
   display: flex;
   flex-direction: column;
@@ -355,6 +370,9 @@ footer .sec-footer__copy p {
   text-align: center;
   min-width: 260px;
   max-width: 350px;
+  box-shadow: 10px 10px 10px 0px rgb(126, 70, 3);
+  position: relative;
+  animation: ingresar-desde-arriba 2s ease;
 }
 .product__box img {
   min-width: 210px;
@@ -370,6 +388,10 @@ footer .sec-footer__copy p {
     max-height: 350px;
     width: 100%;
     height: 100%;
+  }
+  .product__box img:hover {
+    transform: scale(2.2);
+    cursor: pointer;
   }
 }
 .product__box h3 {
@@ -394,6 +416,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== INDEX ====== */
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .home-title__section {
   display: flex;
   flex-direction: column;
@@ -416,12 +439,14 @@ footer .sec-footer__copy p {
   opacity: 0.5;
 }
 
+/* CONTENEDOR PARA LA SECCION DE PRODUCTOS - SE UTILIZA FLEX Y SE ORDENA EN DIRECCION ROW */
 .home-product__section {
   display: flex;
   flex-direction: row;
   text-align: right;
 }
 
+/* ARTICULO PARA PRODUCTO - EN FORMATO ESCRITORIO CONTIENE TEXTO Y LINK A LA SECCION Y EN MOBILE, SE AGREGA LA IMAGEN DE FONDO Y UNA OPACITY PARA QUE SE LEEA EL TEXTO */
 .home-product__article {
   width: 50%;
   padding: 1rem;
@@ -457,6 +482,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* IMAGEN DE LA SECCION DE PRODUCTOS - CUANDO SE PASA A MOBILE SE OCULTA LA IMAGEN */
 .home-product__img {
   width: 50%;
   background-image: url(../img/Productos.jpeg);
@@ -469,12 +495,14 @@ footer .sec-footer__copy p {
   }
 }
 
+/* CONTENEDOR PARA LA SECCION DE SERVICIOS - SE UTILIZA FLEX Y SE ORDENA EN DIRECCION ROW */
 .home-services__section {
   display: flex;
   flex-direction: row;
   text-align: left;
 }
 
+/* IMAGEN DE LA SECCION DE SERVICIOS - CUANDO SE PASA A MOBILE SE OCULTA LA IMAGEN */
 .home-services__img {
   width: 50%;
   background-image: url(../img/Servicios.jpeg);
@@ -487,6 +515,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* ARTICULO PARA SERVICIOS - EN FORMATO ESCRITORIO CONTIENE TEXTO Y LINK A LA SECCION Y EN MOBILE, SE AGREGA LA IMAGEN DE FONDO Y UNA OPACITY PARA QUE SE LEEA EL TEXTO */
 .home-services__article {
   width: 50%;
   padding: 1rem;
@@ -522,12 +551,14 @@ footer .sec-footer__copy p {
   }
 }
 
+/* CONTENEDOR PARA LA SECCION DE TRABAJOS - SE UTILIZA FLEX Y SE ORDENA EN DIRECCION ROW */
 .home-jobs__sections {
   display: flex;
   flex-direction: row;
   text-align: right;
 }
 
+/* ARTICULO PARA TRABAJOS - EN FORMATO ESCRITORIO CONTIENE TEXTO Y LINK A LA SECCION Y EN MOBILE, SE AGREGA LA IMAGEN DE FONDO Y UNA OPACITY PARA QUE SE LEEA EL TEXTO */
 .home-jobs__article {
   width: 50%;
   padding: 1rem;
@@ -563,6 +594,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* IMAGEN DE LA SECCION DE TRABAJOS - CUANDO SE PASA A MOBILE SE OCULTA LA IMAGEN */
 .home-jobs__img {
   width: 50%;
   background-image: url(../img/jobs.jpeg);
@@ -576,6 +608,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== PRODUCTOS ====== */
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-product__title {
   display: flex;
   flex-direction: column;
@@ -611,6 +644,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* CONTENEDOR DE LA SECCION DE PRODUCOTS - EN FORMATO MOBILE SE LISTAS LOS PRODUCTOS EN FILAS Y EN ESCRITORIO SE CREA UNA GRILLA DE 3 X 2 */
 .sec-product-cajas__section {
   display: flex;
   flex-direction: column;
@@ -641,6 +675,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== TRABAJOS ====== */
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-jobs__title {
   display: flex;
   flex-direction: column;
@@ -670,6 +705,7 @@ footer .sec-footer__copy p {
   gap: 1rem;
 }
 
+/* SECCION CONTENEDORA DE LAS CAJAS DE TRABAJO - EN FORMATO ESCRITORIO UTILIZA UNA GRILLA DE 3 X 1 Y EN MOBILE 2 X 2 */
 .sec-jobs-cajas__section {
   display: flex;
   flex-direction: column;
@@ -700,6 +736,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== SERVICIOS ====== */
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-services__title {
   display: flex;
   flex-direction: column;
@@ -730,6 +767,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* SECCION DEL EXPLICACION DE SERVICIO - EN FORMATO MOBILE SE CAMBIA LA ORIENTACION A FILAS */
 .sec-services-subtitle__section {
   display: flex;
   flex-direction: row;
@@ -761,6 +799,7 @@ footer .sec-footer__copy p {
   }
 }
 
+/* SEPARADOR DE SECCION CON GRADIANTE */
 .sec-services__separator {
   height: 0.5vh;
   background-color: #00BAF0;
@@ -769,6 +808,7 @@ footer .sec-footer__copy p {
   border-radius: 1vh;
 }
 
+/* SECCION CONTENEDORA DEL FORM PARA COTIZAR - EN FORMATO MOBILE SE CAMBIA LA DIRECCION DEL CONTENIDO A FILAS */
 .sec-services-form__section {
   display: flex;
   flex-direction: row;
@@ -800,6 +840,7 @@ footer .sec-footer__copy p {
 }
 
 /* ====== CONTACTOS ====== */
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-contacto__title {
   display: flex;
   flex-direction: column;
@@ -826,6 +867,7 @@ footer .sec-footer__copy p {
   color: white;
 }
 
+/* SECCION CONTENEDORA DEL FORM PARA CONTACTO - EN FORMATO MOBILE SE CAMBIA LA DIRECCION DEL CONTENIDO A FILAS */
 .sec-contacto__section {
   display: flex;
   flex-direction: row;

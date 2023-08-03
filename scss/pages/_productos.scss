@@ -1,5 +1,6 @@
 /* ====== PRODUCTOS ====== */
 
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-product__title {
     display: flex;
     flex-direction: column;
@@ -38,6 +39,7 @@
     }
 }
 
+/* CONTENEDOR DE LA SECCION DE PRODUCOTS - EN FORMATO MOBILE SE LISTAS LOS PRODUCTOS EN FILAS Y EN ESCRITORIO SE CREA UNA GRILLA DE 3 X 2 */
 .sec-product-cajas__section {
     display: flex;
     flex-direction: column;

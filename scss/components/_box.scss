@@ -1,5 +1,17 @@
 /* ====== ESTILOS CAJAS ====== */
 
+@keyframes ingresar-desde-arriba {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+/* DISEÑO DE CAJA PARA PRODUCTOS Y TRABAJOS - SE REALIZA TRANSICION DE IZQ. A DER. Y ZOOM AL PASAR POR LA IMAGEN */
 .product__box {
     display: flex;
     flex-direction: column;
@@ -12,6 +24,10 @@
     text-align: center;
     min-width: 260px;
     max-width: 350px;
+
+    box-shadow: 10px 10px 10px 0px rgb(126, 70, 3);
+    position: relative;
+    animation: ingresar-desde-arriba 2s ease;
 
     img {
         min-width: 210px;
@@ -26,6 +42,12 @@
             max-height: 350px;
             width: 100%;
             height: 100%;
+
+            &:hover {
+                transform: scale(2.2);
+                cursor: pointer;
+            }
+
         }
 
     }

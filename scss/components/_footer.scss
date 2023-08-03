@@ -23,6 +23,7 @@ footer {
             }
         }
 
+        /* BARRA DE NAVEGACION EN EL FOOTER - EN FORMATO MOBILE ES VERTICAL Y ESCRITORIO HORIZONTAL */
         nav {
 
             ul {
@@ -57,6 +58,7 @@ footer {
         }
     }
 
+    /* SECCION DE REDES - SE VISUALIZA DE FORMA VERTIAL EN MOBILE Y HORIZONTAL EN ESCRITORIO */
     .sec-footer__redes {
         display: flex;
         flex-direction: column;
@@ -85,6 +87,7 @@ footer {
         }
     }
 
+    /* SECCION DEL COPYRIGHT - SE REALIZA SPAN PARA TOMAR EL TOCAL DE LAS COLUMNAS DE LA GRILLA */
     .sec-footer__copy {
         grid-column: span 3;
         text-align: center;

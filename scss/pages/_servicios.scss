@@ -1,5 +1,6 @@
 /* ====== SERVICIOS ====== */
 
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-services__title {
     display: flex;
     flex-direction: column;
@@ -32,6 +33,7 @@
     }
 }
 
+/* SECCION DEL EXPLICACION DE SERVICIO - EN FORMATO MOBILE SE CAMBIA LA ORIENTACION A FILAS */
 .sec-services-subtitle__section {
     display: flex;
     flex-direction: row;
@@ -63,6 +65,7 @@
     }
 }
 
+/* SEPARADOR DE SECCION CON GRADIANTE */
 .sec-services__separator {
     height: 0.5vh;
     background-color: #00BAF0;
@@ -71,6 +74,7 @@
     border-radius: 1vh;
 }
 
+/* SECCION CONTENEDORA DEL FORM PARA COTIZAR - EN FORMATO MOBILE SE CAMBIA LA DIRECCION DEL CONTENIDO A FILAS */
 .sec-services-form__section {
     display: flex;
     flex-direction: row;

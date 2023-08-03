@@ -1,5 +1,6 @@
 /* ====== CONTACTOS ====== */
 
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-contacto__title {
     display: flex;
     flex-direction: column;
@@ -29,6 +30,7 @@
     }
 }
 
+/* SECCION CONTENEDORA DEL FORM PARA CONTACTO - EN FORMATO MOBILE SE CAMBIA LA DIRECCION DEL CONTENIDO A FILAS */
 .sec-contacto__section {
     display: flex;
     flex-direction: row;

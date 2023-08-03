@@ -1,5 +1,6 @@
 /* ====== TRABAJOS ====== */
 
+/* SECCION DE TITULO - CON IMAGEN DE FONDO Y CON OPACITY PARA QUE SE LEEA BIEN EL TEXTO*/
 .sec-jobs__title {
     display: flex;
     flex-direction: column;
@@ -33,6 +34,7 @@
     }
 }
 
+/* SECCION CONTENEDORA DE LAS CAJAS DE TRABAJO - EN FORMATO ESCRITORIO UTILIZA UNA GRILLA DE 3 X 1 Y EN MOBILE 2 X 2 */
 .sec-jobs-cajas__section {
     display: flex;
     flex-direction: column;
