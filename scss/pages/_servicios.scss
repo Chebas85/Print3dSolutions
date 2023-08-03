@@ -11,6 +11,18 @@
     background-size: cover;
     background-position-y: 45%;
 
+    position: relative;
+    isolation: isolate;
+
+    &::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        background: rgb(29, 29, 29);
+        opacity: .5;
+    }
+
     h1 {
         color: white;
     }
@@ -26,7 +38,7 @@
     align-items: center;
     padding: 1rem;
 
-    h1 {
+    h2 {
         color: darkorange;
         text-align: center;
     }

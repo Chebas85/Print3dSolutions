@@ -24,16 +24,23 @@ footer {
         }
 
         nav {
+
             ul {
-                display: flex block;
+                display: flex;
+                flex-direction: column;
                 text-align: center;
-                gap: 10px;
+                gap: 0.5rem;
+
+                & a:hover{
+                    color: darkorange;
+                }
 
                 @include desktop {
                     display: flex;
+                    flex-direction: row;
                     justify-content: center;
                     gap: 1rem;
-                }    
+                }
             }
 
             @include desktop {
